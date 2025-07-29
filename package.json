@@ -1,0 +1,32 @@
+{
+  "name": "project-node-beta",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start":"nodemon --inspect main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuynhKimHuy/node-project.git"
+  },
+  "keywords": [
+    "node",
+    "node",
+    "project",
+    "nodejs"
+  ],
+  "author": "HuỳnhKimHuy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HuynhKimHuy/node-project/issues"
+  },
+  "homepage": "https://github.com/HuynhKimHuy/node-project#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
