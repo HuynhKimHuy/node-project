@@ -1,0 +1,6 @@
+@use  "variables";
+
+.test{
+    font-size: 3.1rem;
+    color: variables.$red-color;
+}
