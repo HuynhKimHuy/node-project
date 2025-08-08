@@ -1,28 +1,28 @@
-const path = require('path');
-const express = require('express');
-const morgan = require('morgan');
-const handlebars = require('express-handlebars');
-const { log } = require('console');
+const path = require("path");
+const express = require("express");
+const morgan = require("morgan");
+const handlebars = require("express-handlebars");
+const { log } = require("console");
 const app = express();
 const port = 3000;
+const route = require("./routes");
 
-
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, "public")));
 // HTTP loger
-app.use(morgan('combined'))
+app.use(morgan("combined"));
 
-app.engine('hbs', handlebars.engine({
-  extname: `.hbs`
-}));
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resource/views'));
-console.log(__dirname);
+app.engine(
+    "hbs",
+    handlebars.engine({
+        extname: `.hbs`,
+    })
+);
+app.set("view engine", "hbs");
+app.set("views", path.join(__dirname, "resource/views"));
 
-app.get('/', (req, res) => {
-  res.render('home');
-})
-
+// route init
+route(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+    console.log(`Example app listening on port ${port}`);
+});
